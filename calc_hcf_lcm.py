@@ -25,7 +25,7 @@ def generate_answers(filename):
             
             if quest not in ["LCM","HCF"]:
                 raise ValueError("question should be only HCF or LCM")
-            print(f"{quest} {x} {y} = {ans}")
+            print(f"{quest} {x} {y} = {ans}",end="\r\n")
 
 
 if __name__== '__main__':
