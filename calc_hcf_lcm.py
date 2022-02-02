@@ -10,8 +10,8 @@ def lcm(x,y):
     return x*y // hcf(x,y)
 
 
-if __name__== '__main__':
-    with open('data/questions.txt') as f:
+def generate_answers(filename):
+     with open(filename) as f:
         for line in f:
             curr_line = line.rstrip('\n')
             quest,x,y = curr_line.split(' ')
@@ -26,5 +26,10 @@ if __name__== '__main__':
             if quest not in ["LCM","HCF"]:
                 raise ValueError("question should be only HCF or LCM")
             print(f"{quest} {x} {y} = {ans}")
+
+
+if __name__== '__main__':
+    generate_answers('data/questions.txt')
+   
     
     
